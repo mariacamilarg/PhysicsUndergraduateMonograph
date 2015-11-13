@@ -1,0 +1,95 @@
+%This is format.tex file needed for the dmathesis.cls file.  
+%You have to  put this file in the same directory with your thesis files
+
+%Put packages you want to use here and 'fancyhdr' is required   
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{theorem}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{epic}
+\usepackage{hyperref}
+\usepackage{latex/aas_macros} %for the \apj, \mnras, ... references
+\usepackage[nottoc,numbib]{tocbibind} %for bibliography to appear in table of contents
+
+%Set line spacing = 1.5 here
+\renewcommand{\baselinestretch}{1.5}
+
+%Spacing before/after environment equation
+\let\oldequation=\equation
+\let\endoldequation=\endequation
+\renewenvironment{equation}{\vspace{0.2cm}\begin{oldequation}}{\end{oldequation}\vspace{0.2mm}}
+
+% For the final copy you need to remove '\bfseries\today' below 
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markright{\chaptername\ \thechapter.\ #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+\lhead[\fancyplain{}{}]%
+      {\fancyplain{}{\bfseries\rightmark}}
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%
+      {\fancyplain{}{\bfseries\thepage}}
+\lfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\cfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}      
+%\rfoot[\fancyplain{}{}]%
+%      {\fancyplain{}{\bfseries\today}} %Sets the date of today in the bottom right of page
+      
+%Here you set the space between the main text and the start of the footnote
+\addtolength{\skip\footins}{5mm}
+
+%Define new counter so you can have the equation number 4.2.1a for example
+\newcounter{ind}
+\def\eqlabon{
+\setcounter{ind}{\value{equation}}\addtocounter{ind}{1}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\arabic{chapter}%
+         .\arabic{section}.\arabic{ind}\alph{equation}}}
+\def\eqlaboff{
+\renewcommand{\theequation}{\arabic{chapter}%
+         .\arabic{section}.\arabic{equation}}
+\setcounter{equation}{\value{ind}}}
+
+%New theorem you want to use
+{\theorembodyfont{\rmfamily}\newtheorem{Pro}{{\textbf Proposition}}[section]}
+{\theorembodyfont{\rmfamily}\newtheorem{The}{{\textbf Theorem}}[section]}
+{\theorembodyfont{\rmfamily}\newtheorem{Def}[The]{{\textbf Definition}}}
+{\theorembodyfont{\rmfamily}\newtheorem{Cor}[The]{{\textbf Corollary}}}
+{\theorembodyfont{\rmfamily}\newtheorem{Lem}[The]{{\textbf Lemma}}}
+{\theorembodyfont{\rmfamily}\newtheorem{Exp}{{\textbf Example}}[section]}
+\def\remark{\textbf{Remark}:}
+\def\remarks{\textbf{Remarks}:}
+\def\bproof{\textbf{Proof}: }
+\def\eproof{\hfill$\Box$}
+
+%Bold font in math mode, a gift from J.F.Blowey 
+\def\bv#1{\mbox{\boldmath$#1$}}
+
+%COMMANDS
+\newcommand{\kms}{{\ifmmode{{\mathrm{\,km\ s}^{-1}}}\else{\,km~s$^{-1}$}\fi}}
+\newcommand{\lya}{{Ly-$\alpha$~}}
+\newcommand{\ang}{{$\theta_{gal}$~}}
+\newcommand{\lognh}{{$\log{n_H}$~}}
+\newcommand{\nh}{{$n_H$~}}
+\newcommand{\tauh}{{$\tau_{\rm H}$~}}
+\newcommand{\vrot}{{$v_{\rm rot}$~}}
+\newcommand{\vout}{{$v_{\rm out}$~}}
+\newcommand{\avg}[1]{\langle{#1}\rangle}
+\newcommand{\nscatt}{\langle N_{\rm  scatt}\rangle}
+\newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}
+\newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}
+\newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}
+\newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc }\fi}}
+\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm{M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}
+\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm{M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}
+\newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}
+\newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}
+\newcommand{\clara}{{\texttt{CLARA}}~}
+\newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}
+\newcommand{\hs}{{\hspace{1mm}}}
