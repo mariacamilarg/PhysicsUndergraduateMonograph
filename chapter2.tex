@@ -1,7 +1,7 @@
 \setcounter{equation}{0}
 \chapter{Model}
 
-We use the simplified rotation model developed by \cite{Garavito14} in which a rotating galaxy is modeled as a solid rotating sphere, with a homogeneous mixture of hydrogen and dust. There is also the radial expanding velocity. Photons are initially at the center of the sphere. These two velocities are added by components as follows. The equations governing this movement in which the axis of rotation is defined to be align with the $z$-axis are: \\
+We use the simplified rotation model developed by \cite{Garavito14} in which a rotating galaxy is modeled as a solid rotating sphere, with a homogeneous mixture of hydrogen and dust. There is also the radial expanding velocity. Photons are initially at the center of the sphere. These two velocities are added by components as follows. The equations governing this movement in which the axis of rotation is defined to be align with the $z$-axis are: 
 
 \begin{equation}
 v_{x}=\frac{x}{R}v_{\rm out}-\frac{y}{R}v_{\rm rot}, \label{subeq1}
@@ -35,31 +35,35 @@ These galaxies have gas fractions close to $20\%$ (\cite{Narayanan2012}). We app
 
 These choices give us a range for the number density of Hydrogen atoms of $4\times10^{-4}-4\times 10^{-3}$ atoms cm$^{-3}$. With a Lyman-$\alpha$ cross section at the line center of $\sigma_{H}=1.0\times 10^{-14}$ cm$^{2}$ we finally obtain that the optical depth from the cloud's center  should be in the range $\tau_{\rm H}=2 \times 10^{5} - 2 \times 10^{6}$.  \\
 
-In order to be able to tell the influence of the rotation and outflow velocities in the \lya line morphology, a mapping of them is made without concerning of their physical meaning at first, this constitutes the 1st run. In the second run the interesting ranges are identified and narrowed. In the 3rd and last run, the final physical and relevant combinations are made. \\
+In order to be able to tell the influence of the rotation and outflows velocities in the \lya line morphology, a mapping of them is made without concerning of their physical meaning at first, this constitutes the 1st run. In the second run the interesting ranges are identified and narrowed. In the 3rd and last run, the final physical and relevant combinations are made. \\
 
-All of the selected values with its corresponding run are registered in Tab. \ref{tab:runs}. The way to read it is: for the $i^{th}$ run, all of the permutations of \tauh, \vrot and \vout are run.\\
+All of the selected values with its corresponding run are registered in Tab. \ref{tab:runs}. The way to read it is: for the $i^{th}$ run, all of the permutations of \tauh, \vrot and \vout are run.
 
 \begin{table}[htbp]
 	\centering
-	\caption{Combinations of values in each run.}
-	\begin{tabular}{cccc}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		RUN & \tauh & \vrot & \vout \\
+		\textbf{RUN} & \bv{1^{st}} & \bv{2^{nd}} & \bv{3^{rd}} \\
 		\hline
-		& 5     & 0     & 100 \\
-		$1^{st}$ & 6     & 100   & 200 \\
-		& 7     & 200   & 300 \\
-		&       & 300   &  \\
+		\tauh & 5, 6, 7 & 5, 6, 7 & 5, 6 \\
 		\hline
-		& 5     & 50    & 25 \\
-		$2^{nd}$ & 6     & 100   & 50 \\
-		& 7     &       & 75 \\
+		\vrot (\kms) & 0, 100, 200 ,300 & 50, 100 & 50, 100 \\
 		\hline
-		& 5     & 50    & 5 \\
-		$3^{rd}$ & 6     & 100   & 10 \\
-		& 7     &       & 15 \\
-		&       &       & 20 \\
+		\vout (\kms) & 100, 200, 300 & 25, 50, 75 & 5, 10, 15, 20 \\
 		\hline
 	\end{tabular}%
+	\caption{\textbf{Combinations of values in each run.}}
 	\label{tab:runs}%
 \end{table}%
+
+Is important to note that if we stand next to the galaxy, not all of the photons emitted are going to be observed because some will have directions that could never reach our position. For this reason, it is very important to define viewing angle so that only photons that escape within that range are counted in the spectrum. As seen in Fig. \ref{fig:viewing_angle_sketch}, only the photons with escaping direction angle $\theta$ respect to the rotation axis that belongs to the range $[\theta_{min}-\theta_{max}]$ will be reach the observer. 
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{./figures/chapter2/viewing_angle_sketch}
+	\end{center}
+	\caption{\textbf{Viewing Angle Sketch:} The galaxy is in the $y-z$ plane perspective and the eye is located at an specific viewing angle of the sphere. Only photons with a direction that enters in his range of vision can enter to the result.
+		\label{fig:viewing_angle_sketch}}
+\end{figure}
+
+This creates 2 new parameters, the azimuthal angle and the polar angle. However, the galaxy's movement is symmetrical respect to its rotation axis, which implies that the resulting spectrum will not vary depending on the azimuthal angle. This lets us then take all of the photons with azimuthal viewing angle from $0$ to $2\pi$ for each selected polar range, which we will do for statistical reasons. Regarding the polar angle, we will take spectra from 9 different ranges from $0$ to $\pi$ that are uniform in $\cos(\theta)$ and analyze the influence of this effect as well. All of these results will be seen in the next chapter. 

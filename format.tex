@@ -20,7 +20,10 @@
 %Spacing before/after environment equation
 \let\oldequation=\equation
 \let\endoldequation=\endequation
-\renewenvironment{equation}{\vspace{0.2cm}\begin{oldequation}}{\end{oldequation}\vspace{0.2mm}}
+\renewenvironment{equation}{\vspace{0.1cm}\begin{oldequation}}{\end{oldequation}\vspace{0.1cm}}
+
+%Space between table/figure and caption
+\setlength{\abovecaptionskip}{0.1cm}
 
 % For the final copy you need to remove '\bfseries\today' below 
 \pagestyle{fancy}
