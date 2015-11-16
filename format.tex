@@ -1,5 +1,4 @@
-%This is format.tex file needed for the dmathesis.cls file.  
-%You have to  put this file in the same directory with your thesis files
+%This is format.tex file needed for the dmathesis.cls file. Put this file in the same directory with your thesis files
 
 %Put packages you want to use here and 'fancyhdr' is required   
 \usepackage{fancyhdr}
@@ -25,7 +24,6 @@
 %Space between table/figure and caption
 \setlength{\abovecaptionskip}{0.1cm}
 
-% For the final copy you need to remove '\bfseries\today' below 
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markright{\chaptername\ \thechapter.\ #1}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
@@ -59,40 +57,18 @@
          .\arabic{section}.\arabic{equation}}
 \setcounter{equation}{\value{ind}}}
 
-%New theorem you want to use
-{\theorembodyfont{\rmfamily}\newtheorem{Pro}{{\textbf Proposition}}[section]}
-{\theorembodyfont{\rmfamily}\newtheorem{The}{{\textbf Theorem}}[section]}
-{\theorembodyfont{\rmfamily}\newtheorem{Def}[The]{{\textbf Definition}}}
-{\theorembodyfont{\rmfamily}\newtheorem{Cor}[The]{{\textbf Corollary}}}
-{\theorembodyfont{\rmfamily}\newtheorem{Lem}[The]{{\textbf Lemma}}}
-{\theorembodyfont{\rmfamily}\newtheorem{Exp}{{\textbf Example}}[section]}
-\def\remark{\textbf{Remark}:}
-\def\remarks{\textbf{Remarks}:}
-\def\bproof{\textbf{Proof}: }
-\def\eproof{\hfill$\Box$}
-
 %Bold font in math mode, a gift from J.F.Blowey 
 \def\bv#1{\mbox{\boldmath$#1$}}
 
 %COMMANDS
+\newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}
 \newcommand{\kms}{{\ifmmode{{\mathrm{\,km\ s}^{-1}}}\else{\,km~s$^{-1}$}\fi}}
 \newcommand{\lya}{{Ly-$\alpha$~}}
-\newcommand{\ang}{{$\theta_{gal}$~}}
-\newcommand{\lognh}{{$\log{n_H}$~}}
-\newcommand{\nh}{{$n_H$~}}
+
 \newcommand{\tauh}{{$\tau_{\rm H}$~}}
 \newcommand{\vrot}{{$v_{\rm rot}$~}}
 \newcommand{\vout}{{$v_{\rm out}$~}}
-\newcommand{\avg}[1]{\langle{#1}\rangle}
-\newcommand{\nscatt}{\langle N_{\rm  scatt}\rangle}
-\newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}
-\newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}
-\newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}
-\newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc }\fi}}
-\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm{M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}
-\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm{M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}
-\newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}
-\newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}
-\newcommand{\clara}{{\texttt{CLARA}}~}
-\newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}
-\newcommand{\hs}{{\hspace{1mm}}}
+
+\newcommand{\ang}{{$\theta_{gal}$~}}
+\newcommand{\lognh}{{$\log{n_H}$~}}
+\newcommand{\nh}{{$n_H$~}}

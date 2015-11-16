@@ -2,9 +2,72 @@
 \setcounter{chapter}{0}
 \renewcommand{\chaptername}{Appendix}
 %\renewcommand{\thechapter}{\arabic{section}.\arabic{ind}}
-\renewcommand{\theequation}{\Alph{chapter}.\arabic{section}.\arabic{equation}}
-\addcontentsline{toc}{chapter}{\numberline{}Appendix}
+\renewcommand{\theequation}{\Alph{chapter}.\arabic{section}.\arabic{equation}} \addcontentsline{toc}{chapter}{\numberline{}Appendix}
 \setcounter{equation}{0}
+
+\chapter{Results' Figures}
+\label{first_plots}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./figures/chapter3/1_tau10E5_phi83-90}
+	\end{center}
+	\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $0,100,200,300$ \kms and \vout ranging $100,200,300$ \kms.
+		\label{fig:1_tau10E5_phi83-90}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./figures/chapter3/1_tau10E6_phi83-90}
+	\end{center}
+	\caption{\textbf{\lya profile for \tauh$=10^6$:} With \vrot ranging $0,100,200,300$ \kms and \vout ranging $100,200,300$ \kms.
+		\label{fig:1_tau10E6_phi83-90}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./figures/chapter3/1_tau10E7_phi83-90}
+	\end{center}
+	\caption{\textbf{\lya profile for \tauh$=10^7$:} With \vrot ranging $0,100,200,300$ \kms and \vout ranging $100,200,300$ \kms.
+		\label{fig:1_tau10E7_phi83-90}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./figures/chapter3/2_tau10E5_phi83-90}
+	\end{center}
+	\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $25,50,75$ \kms.
+		\label{fig:2_tau10E5_phi83-90}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./figures/chapter3/2_tau10E6_phi83-90}
+	\end{center}
+	\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $25,50,75$ \kms.
+		\label{fig:2_tau10E6_phi83-90}}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=1\textwidth]{./figures/chapter3/2_tau10E7_phi83-90}
+	\end{center}
+	\caption{\textbf{\lya profile for \tauh$=10^5$:} With \vrot ranging $50,100$ \kms and \vout ranging $25,50,75$ \kms.
+		\label{fig:2_tau10E7_phi83-90}}
+\end{figure}
+
+\newpage 
+ 
 \chapter{Rotation + Thin Shell Outflow}
 
 In this section we describe the two different models that together are used to reproduce a real and consistent \lya profile. The first one is a rotation model for the galaxy and the second is a thin shell model for the outflow. \\ 
@@ -31,8 +94,7 @@ Where $R$ is the radius of the sphere and $V_{\rm max}$ is the linear velocity a
 In this work we use the analytical expression for rotation derived in \cite{Garavito14} where a rotating sphere can be seen as a static sphere in the laboratory frame with a bulk velocity difference in each surface element with respect to a distant observer. With the previous analysis the outcoming spectra can be expressed as:\\
 
 \begin{equation}
-	J(x,i) \approx 2\pi \int_0^Rdb \hs b
-	\int_0^{2\pi}d\phi \hs J(x,b,\phi,i),
+J(x,i) \approx 2\pi \int_{0}^{R} db \quad b \int_0^{2\pi} d\phi \quad J(x,b,\phi,i),
 \end{equation}
 
 Where $J(x, b, \phi, i)$ is the spectrum of the flux emerging from the surface at point $(b, \phi)$ and is expressed as: 
@@ -66,14 +128,14 @@ The outflow also includes dust homogeneously mixed with the gas. The dust optica
 
 \section{Joint Model}
 
-The joint model consists of combining the two models that were just explained. A rotating spherical galaxy is placed at the center with a thin shell outflow surrounding it as seen in Fig. \ref{fig:model}. What happens is that the photons that escaped the galaxy enter now into the outflow with the same radial direction that they came out with. At the end only a fraction of those manage to get out of the outflow and their wavelengths are measured to find the final spectrum. \\
+The joint model consists of combining the two models that were just explained. A rotating spherical galaxy is placed at the center with a thin shell outflow surrounding it as seen in Fig. \ref{fig:model_app}. What happens is that the photons that escaped the galaxy enter now into the outflow with the same radial direction that they came out with. At the end only a fraction of those manage to get out of the outflow and their wavelengths are measured to find the final spectrum. \\
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.3\textwidth]{./figures/model.png}
+		\includegraphics[width=0.3\textwidth]{./figures/appendix/model.png}
 	\end{center}
 	\caption{\textbf{Model:} A central rotating galaxy surrounded by an expanding thin shell outflow.}
-	\label{fig:model}
+	\label{fig:model_app}
 \end{figure}
 
 In order to simulate all the possible cases we set some key parameters for the program to vary, and some others fixed which are defined by the characteristics of LAEs. This are chosen as follows.\\
@@ -108,7 +170,7 @@ If one sets fixed outflow \vout and \lognh in each case the rotation velocity ha
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/inf_vgal_soft.png}
+		\includegraphics[width=0.5\textwidth]{./figures/appendix/inf_vgal_soft.png}
 	\end{center}
 	\caption{\textbf{Influence of Galaxy Rotation Velocity:} The values of the fixed parameters are \vout = $100$ \kms and \lognh = $20.9375$. The 3 possible velocities are shown in the plot with different line styles. The increase is visible as well as its small enlargement factor.}
 	\label{fig:influence_vrot}
@@ -120,7 +182,7 @@ The effect of the \lognh is the creation of 2 peaks: the left one very thin, tal
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/inf_lognh_soft.png}
+		\includegraphics[width=0.5\textwidth]{./figures/appendix/inf_lognh_soft.png}
 	\end{center}
 	\caption{\textbf{Influence of Outflow Hydrogen Column Density:} The values of the fixed parameters are \vout = $100$ \kms and \vrot = $100$ \kms. There are three stages of the \lognh value shown: initial, intermediate and final, with the values shown on the plot.}
 	\label{fig:influence_lognH}
@@ -132,7 +194,7 @@ The effect of this parameter consists in a shift of the initial spectrum in the 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/inf_vout1_soft.png}
+		\includegraphics[width=0.5\textwidth]{./figures/appendix/inf_vout1_soft.png}
 	\end{center}
 	\caption{\textbf{Influence of Outflow Expanding Velocity:} The values of the fixed parameters are \lognh = 20.125 and \vrot = $100$ \kms.}
 	\label{fig:influence_vout1}
@@ -140,7 +202,7 @@ The effect of this parameter consists in a shift of the initial spectrum in the 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{./figures/inf_vout2_soft.png}
+		\includegraphics[width=0.5\textwidth]{./figures/appendix/inf_vout2_soft.png}
 	\end{center}
 	\caption{\textbf{Influence of Outflow Expanding Velocity:} The values of the fixed parameters are \lognh = 21.25 and \vrot = $100$ \kms.}
 	\label{fig:influence_vout2}
