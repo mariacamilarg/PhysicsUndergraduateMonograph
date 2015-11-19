@@ -1,4 +1,23 @@
 \setcounter{equation}{0}
 \chapter{Conclusions}
+%Objetivo, metodo, simulaciones
+In this monograph, the objective was to analyze and measure the influence of galaxy rotation and outflows on the \lya line. The motivation for this is to be able to obtain physical information of a LAE by just looking at its \lya profile. In order to accomplish this objective, I propose a new model of a LAE consisting of an sphere of Hydrogen atoms that expands radially and rotates as a solid body. The program CLARA \cite{CLARA} is used to set the conditions and emulate the transfer code. \\
 
-Here go the conclusions....\\ 
+The conclusions obtained from this work are: \\
+
+\begin{itemize}
+\item The outgoing spectra depend on the angle an external observer is viewing the galaxy from. The closer it is to the equator of the galaxy, the higher the central valley of the frequency distribution. \\
+
+\item The effects of \vrot, \vout and \tauh are consistent with the different authors that have used them. \vrot broadens the \lya line. \vout increases the peaks asymmetry and \tauh induces a redshift around the zero velocity.\\
+
+\item The \vrot effect is much larger than the \vout one. Only a little fraction of \vrot, in the radial direction, is necessary to obtain 2 asymmetric peaks. If it \vout approaches the value of \vrot, both peaks start merging until only the outflows effect is visible. \\
+
+\item The final spectra obtained are roughly consistent with LAEs observations.  \\
+
+\end{itemize}
+
+\section{Future work}
+
+Due to the long time CLARA takes to run, it was not possible to fit an observational LAE and predict its parameters. However, the next step is to use tools as MCMC (Monte Carlo Markov Chain) to obtain the galaxy's \tauh, \vrot and \vout that would agree with my model. \\
+
+All of this work is available online and free to use to anyone. The data, source code and instructions to replicate my monograph's results are in the GitHub repository:  \texttt{https://github.com/astroandes/CLARA\_RotationOutflows}. \\
