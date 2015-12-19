@@ -41,7 +41,7 @@ In several problems in science it is useful to define dimensionless variables. T
 
 \begin{equation}
 \label{eq:x_freq}
-x \equiv \frac{(\nu -\nu_{\rm \alpha})}{\Delta\nu_{\rm D}},
+x \equiv \frac{\nu -\nu_{\rm \alpha}}{\Delta\nu_{\rm D}},
 \end{equation} 
 
 where $\nu$ is the photon's frequency and $\nu_{\rm \alpha} = 2.46\times 10^{15}$ Hz is the \lya natural frequency. The denominator $\Delta\nu_{\rm D}$ is defined in Eq. \ref{eq:delta_nuD}.
@@ -59,12 +59,12 @@ However, in the plots shown in this monograph I use instead velocity, $V$, units
 
 \begin{equation}
 \label{eq:V}
-V = xv_{\rm th}.
+V = xv_{\rm th} = \frac{\nu -\nu_{\rm \alpha}}{\nu_{\rm \alpha}}c.
 \end{equation}
 
 The units of $V$ are usually \kms. In this case, the photon is redshifted in frequency when the velocity is greater than 0, and blueshifted in the opposite case. \\
 
-The initial emission of photons is taken at the center of the sphere. From here, $100000$ photons are emitted with the natural \lya wavelength. Then, they start to behave as described in section \ref{sec1:laes} (See Fig. \ref{fig:radiative_transfer}). When each photon is re-emitted, its new wavelength depends on the H atom's velocity (both thermal and bulk). However its new direction of propagation is random in the rest frame of the atom. \\ 
+The initial emission of photons is taken at the center of the sphere. From here, $100000$ photons are emitted with the natural \lya wavelength. Then, they start to behave as described in section \ref{sec1:laes} (See Fig. \ref{fig:radiative_transfer}). When each photon is re-emitted, its new wavelength depends on the H atom's velocity (both thermal and bulk) and direction (both initial and final). However the photon's new direction of propagation is random in the rest frame of the atom. \\ 
 
 The individual scattering of all the photons is tracked through the complete 3D Hydrogen distribution. Once each photon escapes the galaxy, its final values are stored: position $\vec{r}$, direction of propagation $\hat{k}$, dimensionless frequency $x$, and number of scatterings $N$. To build the observed spectrum I make a histogram of the escape frequencies $x$.\\
 
